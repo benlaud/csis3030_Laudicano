@@ -4,7 +4,7 @@ include("header.php");
 
 $id = $_GET["id"];
 $result = mysqli_query($connection,"select * from products where category_id=$id");
-$category_name = mysqli_query($connection,"select category_name from categories where (id = $id)");
+$category_name = mysqli_query($connection,"select * from categories where (id = $id)");
 ?>
 <div class="row fullwidth">
 
@@ -28,7 +28,14 @@ $category_name = mysqli_query($connection,"select category_name from categories 
 					<img src="img/<?php echo $row["image"] ?>"/>
 			  </div>
 
-				<h2><?php echo $row["product_name"] ?></h2>
+				<h2>
+						<a href="product_detail.php?product_id=<?php echo $row["id"] ?>">
+
+							<?php echo $row["product_name"] ?>
+							
+						</a>
+
+				</h2>
 
 		    <p><?php echo $row["description"] ?></p>
 

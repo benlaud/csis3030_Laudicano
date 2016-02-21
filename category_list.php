@@ -1,5 +1,5 @@
 <?php
-$sql = "select * from categories";
+$sql = "select * from categories order by category_name";
 $result = mysqli_query($connection,$sql);
 ?>
 
