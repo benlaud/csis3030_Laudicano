@@ -24,7 +24,6 @@ foreach ($_POST as $product_field => $quantity) {
 			$quantity = $quantity + $row["quantity"];
 		}
 
-
 		//delete the old cart entry (if it exists)
 		mysqli_query($connection,"delete from cart where session_id = '$session_id' and product_id = $product_id");
 

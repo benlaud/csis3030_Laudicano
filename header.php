@@ -20,34 +20,22 @@
 
   <div class="logo-wrapper hide-for-small-only">
     <div class="logo">
-      <img src="http://placehold.it/350x150?text=LOGO">
+      <a href="index.php"><img src="http://placehold.it/350x150?text=LOGO"></a>
     </div>
   </div>
 
   <!-- Left Nav Section -->
   <div class="top-bar-left">
     <ul class="vertical medium-horizontal menu">
-      <li><a href="#">Menu 1</a></li>
-      <li><a href="#">Menu 2</a></li>
-      <li><a href="#">Menu 3</a></li>
+      <?php include("category_list.php"); ?>
     </ul>
   </div>
 
   <!-- Right Nav Section -->
   <div class="top-bar-right">
-    <ul class="vertical medium-horizontal dropdown menu" data-dropdown-menu>
-      <li class="has-submenu">
-        <a href="#">Menu 4</a>
-        <ul class="submenu menu vertical medium-horizontal" data-submenu>
-          <li><a href="#">First link in dropdown</a></li>
-        </ul>
-      </li>
-      <li class="has-submenu">
-        <a href="#">Menu 5</a>
-        <ul class="submenu menu vertical" data-submenu>
-          <li><a href="#">First link in dropdown</a></li>
-        </ul>
-      </li>
+    <ul class="vertical medium-horizontal menu">
+      <li class=""><a href="cart_list.php">View Cart</a></li>
+      <li class=""><a href="#">About</a></li>
     </ul>
   </div>
 
