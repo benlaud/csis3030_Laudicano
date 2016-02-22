@@ -6,9 +6,6 @@
 include("global.php");
 
 
-//Make the variable easier to use
-$session_id = session_id();
-
 
 //loop over all the $_POST variables that were given to us
 foreach ($_POST as $product_field => $quantity) {

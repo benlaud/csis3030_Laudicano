@@ -1,9 +1,6 @@
 <?php include ("global.php");
       include("header.php");
 
-      //Make the variable easier to use
-      $session_id = session_id();
-
       $sql = "select * from products,cart where (cart.session_id='$session_id') and (cart.product_id = products.id)";
 
       $result = mysqli_query($connection,$sql);
