@@ -4,9 +4,11 @@
       $sql = "";
 ?>
 
-<form action="checkout_process.php" method="POST"; >
+<form class="row" action="checkout_process.php" method="POST"; >
 
-<?php echo $errormessage ?>
+<p style="color:#965251;"><?php echo $errormessage ?></p>
+
+<p>Just one more step! Enter yor contact information below.</p>
 
 <input type="text" name="firstname" value="<?php echo $firstname ?>" placeholder="first name" >
 <input type="text" name="address" value="<?php echo $address ?>" placeholder="address" >

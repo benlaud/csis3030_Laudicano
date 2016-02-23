@@ -12,12 +12,6 @@ $category_name = mysqli_query($connection,"select * from categories where (id = 
 
 		<div class="row" style="padding:30px;" data-equalizer data-options="equalize_on_stack: true">
 
-			<?php while ($row = mysqli_fetch_assoc($category_name)): ?>
-
-				<h1><?php echo $row["category_name"] ?></h1>
-
-			<?php endwhile; ?>
-
 			<?php while ($row = mysqli_fetch_assoc($result)): ?>
 
 		  <div class="small-12 medium-4 columns menu-item">
@@ -28,16 +22,15 @@ $category_name = mysqli_query($connection,"select * from categories where (id = 
 					<img src="img/<?php echo $row["image"] ?>"/>
 			  </div>
 
-				<h2>
+				<h5>
 						<a href="product_detail.php?product_id=<?php echo $row["id"] ?>">
-
 							<?php echo $row["product_name"] ?>
-							
 						</a>
+				</h5>
 
-				</h2>
+		    <p><?php echo $row["price"] ?></p>
 
-		    <p><?php echo $row["description"] ?></p>
+				<small class="view_more">	<a href="product_detail.php?product_id=<?php echo $row["id"] ?>">Read More</a></small>
 
 			</div>
 

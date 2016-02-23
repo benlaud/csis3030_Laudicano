@@ -36,16 +36,20 @@ if ($errormessage != "") {
 
 <div class="row">
 
-  <h1><?php echo $firstname ?>, thank you for ordering!</h1>
-  <p>Your order will be delivered to:</p>
-  <p>
-    <?php echo $address ?>
-    <br />
-    <?php echo $city ?>
-    <br />
-    <?php echo $zip ?>
-  </p>
-
+  <h5><?php echo $firstname ?>, thank you for ordering!</h5>
+  <div class="small-12 medium-4 columns">
+    <div class="callout">
+    <p>Your order will be delivered to:</p>
+    <p>
+      <?php echo $address ?>
+      <br />
+      <?php echo $city ?>
+      <br />
+      <?php echo $zip ?>
+    </p>
+  </div>
+</div>
+<div class="small-12 medium-8 columns callout secondary">
   <?php while ($row = mysqli_fetch_assoc($result)): ?>
     <h4><?php echo $row["product_name"] ?> <small>Quantity: <?php echo $row["quantity"] ?></h4>
     <?php $remaining = intval($row["quantity_remaining"]) - intval($row["quantity"]);
@@ -57,6 +61,9 @@ if ($errormessage != "") {
           $cart_contents = $cart_contents . "\r\n" . $row["product_name"] . ". Quantity: " . $row["quantity"];
     ?>
   <?php endwhile; ?>
+</div>
+
+
 
 <?php
 //email shenanigins

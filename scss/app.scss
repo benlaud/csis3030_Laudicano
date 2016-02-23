@@ -47,9 +47,9 @@
 /* Variables */
 
 // Adjust width accordingly (use even #'s)
-$logo-width: 118px;
+$logo-width: 400px;
 // Reduce px value to increase space between logo and menu text
-$logo-padding: $logo-width - 32px;
+$logo-padding: $logo-width - 120px;
 // Leave alone
 $logo-margin: - ($logo-width / 2);
 
@@ -82,13 +82,58 @@ $logo-margin: - ($logo-width / 2);
       right: 50%;
       top: -6px;
       margin-left: $logo-margin;
+
+      svg {
+        fill: #C2C5C5;
+      }
     }
   }
 
+  .top-bar-right,.top-bar-left {
+    ul {
+      li {
+        a {
+          text-transform: uppercase;
+          color: #131515;
+          font-weight: 300;
+          letter-spacing: 2px;
+
+          height: 80px;
+          //border-bottom: solid 5px black;
+          position: relative;
+          display: inline-block;
+
+          &:after {
+              content: '';
+              display: block;
+              margin: auto;
+              height: 2px;
+              width: 0px;
+              background: transparent;
+              transition: width .5s ease, background-color .5s ease;
+              position: absolute;
+              top: 40px;
+              left: 0;
+              background: #C2C5C5;
+
+          }
+
+          &:hover,&:active {
+
+              &:after {
+                  width: 100%;
+
+              }
+          }
+        }
+      }
+    }
+  }
   // Right part
   .top-bar-right {
     width: 50%;
     padding-left: $logo-padding;
+    padding-top: 30px;
 
     ul {
       float: left;
@@ -99,9 +144,63 @@ $logo-margin: - ($logo-width / 2);
   .top-bar-left {
     width:  50%;
     padding-right: $logo-padding;
+    padding-top: 30px;
 
     ul {
       float: right;
     }
   }
+}
+
+
+footer {
+  position: fixed;
+  bottom: 0;
+
+  .menu {
+    margin-left: 0;
+     li a {
+      text-transform: uppercase;
+      color: #131515;
+      font-weight: 300;
+      letter-spacing: 2px;
+      font-size: .8rem;
+    }
+  }
+}
+
+h5,small {
+  margin-top: 10px;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 2px;
+  font-size: 1rem;
+
+  a {
+    color: #131515;
+    &:hover {
+        color: #131515;
+    }
+  }
+
+}
+
+small {
+  font-size: .8rem;
+  margin-top: -20px;
+  text-transform: inherit;
+}
+
+.button {
+  font-weight: 600;
+
+}
+
+
+.cart {
+  img {
+    height: 300px;
+    margin-bottom: 30px;
+  }
+
 }
