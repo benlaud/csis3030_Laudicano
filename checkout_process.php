@@ -70,7 +70,7 @@ if ($errormessage != "") {
 include("jwu_mail.php");
 jwu_mail(
     'blaudicano01@wildcats.jwu.edu',
-    'New Message',
+    'Your Daiquiri Order',
     $firstname . ', thank you for choosing Daiquiri. Here is your order summary: ' . $cart_contents
 );
 
