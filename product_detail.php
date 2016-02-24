@@ -18,6 +18,7 @@
 
   <div class="small-12 large-6 columns">
     <h2><?php echo $row["product_name"] ?></h2>
+    <p><?php echo $row["quantity_remaining"] ?> in stock</p>
     <p><?php echo $row["description"] ?></p>
 
     <form class="input-group" action="cart_process.php" method="POST">
